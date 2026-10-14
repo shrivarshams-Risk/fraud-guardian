@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Fraud Guardian</title>
+    <style>
+        :root {
+            --bg: #0B0F19;
+            --card: #131B2E;
+            --border: #233154;
+            --cyan: #06B6D4;
+            --blue: #3B82F6;
+            --text: #F1F5F9;
+            --muted: #94A3B8;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        h1 {
+            color: var(--cyan);
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        h2 {
+            color: #FFFFFF;
+            font-size: 20px;
+            margin-top: 32px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+        .subtitle {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(6, 182, 212, 0.15);
+            color: var(--cyan);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid var(--cyan);
+            margin-bottom: 20px;
+        }
+        p, li {
+            color: #CBD5E1;
+            font-size: 15px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background: rgba(6, 182, 212, 0.08);
+            border-left: 4px solid var(--cyan);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        footer {
+            margin-top: 40px;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            color: var(--muted);
+            font-size: 13px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">🛡️ Zero-Knowledge Architecture & DPDP Act 2023 Compliant</div>
+        <h1>Privacy Policy for Fraud Guardian</h1>
+        <div class="subtitle">Effective Date: October 14, 2026 | Last Updated: October 14, 2026</div>
+
+        <p><strong>Fraud Guardian</strong> ("we", "our", or "the App") is an on-device cybersecurity solution built to protect individuals, families, and senior citizens across India from deceptive messaging scams, digital arrest extortion, fake banking trojan APK droppers, and reverse UPI PIN fraud.</p>
+
+        <div class="highlight-box">
+            <strong>Core Privacy Pledge:</strong> Fraud Guardian operates on a <em>Zero-Knowledge Architecture</em>. <strong>We do not read, log, record, store, or transmit your private chats, personal SMS messages, contacts, photos, or personal identifiers to any external server.</strong> All threat evaluations occur 100% locally on your device in volatile memory (RAM).
+        </div>
+
+        <h2>1. Regulatory Compliance (Pan-India)</h2>
+        <p>This Privacy Policy is formulated in strict accordance with:</p>
+        <ul>
+            <li><strong>Digital Personal Data Protection (DPDP) Act, 2023:</strong> Principle of data minimization and purpose limitation.</li>
+            <li><strong>Information Technology Act, 2000 & 2008 Amendments:</strong> Including Section 79 Intermediary Guidelines.</li>
+            <li><strong>RBI Cyber Security Framework for Banks:</strong> Consumer advisory alignment against unauthorized UPI pull requests and sideloaded APK trojans.</li>
+        </ul>
+
+        <h2>2. Data Collection and Usage</h2>
+        <p>We believe that privacy is a fundamental right. Accordingly:</p>
+        <ul>
+            <li><strong>Personal Communications:</strong> We <strong>DO NOT</strong> collect or upload chat messages, text content, phone numbers, or conversation histories.</li>
+            <li><strong>Device & Identity Information:</strong> We <strong>DO NOT</strong> collect IMEI, Advertising IDs, MAC addresses, or location data.</li>
+            <li><strong>Account Creation:</strong> Fraud Guardian requires <strong>NO user account, login credentials, or email address</strong> to activate core protection.</li>
+            <li><strong>Family Circle Data:</strong> Optional contact nicknames and phone numbers entered into the "Family Circle" tab remain encrypted exclusively inside Android's private <code>EncryptedSharedPreferences</code> on your local handset.</li>
+        </ul>
+
+        <h2>3. Android Permissions & Justifications</h2>
+        <p>To provide real-time protection, Fraud Guardian requests specific permissions strictly required for threat detection:</p>
+        <ul>
+            <li><strong>Notification Access (<code>android.permission.BIND_NOTIFICATION_LISTENER_SERVICE</code>):</strong>
+                <br><em>Purpose:</em> Allows the on-device scanner to inspect incoming notifications from messaging applications (e.g., WhatsApp, SMS, Telegram) for malicious web links (URLs), reverse UPI payment triggers, or Trojan APK file references.
+                <br><em>Execution:</em> All text inspection happens in-memory (&lt;5 milliseconds) using regex heuristics. Non-threatening notifications are immediately discarded from RAM without persistence.
+            </li>
+            <li><strong>Display Over Other Apps (<code>android.permission.SYSTEM_ALERT_WINDOW</code>):</strong>
+                <br><em>Purpose:</em> Enables the application to instantly display an emergency high-priority warning modal over WhatsApp or your messaging screen when a critical banking trojan or digital arrest extortion attempt is intercepted.
+            </li>
+            <li><strong>Post Notifications (<code>android.permission.POST_NOTIFICATIONS</code>):</strong>
+                <br><em>Purpose:</em> Delivers critical security threat alerts to the Android notification shade when an unauthorized link or file download is blocked.
+            </li>
+        </ul>
+
+        <h2>4. Data Storage and Retention</h2>
+        <p>Fraud Guardian maintains an optional local "Intercepted Threat Log" solely within the device's sandbox. Users may clear this log at any time with a single tap. Uninstalling the application immediately and irreversibly deletes all stored local logs.</p>
+
+        <h2>5. Third-Party Disclosures & Cloud Services</h2>
+        <p>Fraud Guardian does not share, sell, rent, or trade personal data with advertisers, third-party analytics SDKs, data brokers, or marketing networks. All rule evaluation is completely client-side.</p>
+
+        <h2>6. 1930 Cyber Crime Helpline & Legal Assistance</h2>
+        <p>Fraud Guardian provides convenient 1-tap dialers and incident dossier generators for the <strong>National Cyber Crime Helpline (1930)</strong>, <strong>cybercrime.gov.in</strong>, and Bank Fraud Control Units (FCUs). Generating a dossier formats evidence strictly on your screen for your own use; Fraud Guardian never files reports or transmits telemetry without your explicit instruction.</p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>Fraud Guardian does not collect personal information from individuals of any age, including children under 18.</p>
+
+        <h2>8. Contact Us & Grievance Officer</h2>
+        <p>If you have any questions, feedback, or grievance inquiries regarding this Privacy Policy, please contact our support team:</p>
+        <p>
+            <strong>Email:</strong> support.fraudguardian@proton.me (or developer email)<br>
+            <strong>Project Lead:</strong> Operational Risk & Cyber Protection Team<br>
+            <strong>Location:</strong> Bengaluru, Karnataka, India
+        </p>
+
+        <footer>
+            &copy; 2026 Fraud Guardian. Engineered for Indian Cybersecurity & Digital Trust.
+        </footer>
+    </div>
+</body>
+</html>
